@@ -15,8 +15,8 @@
 
   /* #### Text */
 
-  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
-  --Soft-red: hsl(14, 88%, 65%);
+  --text-question-select: hsl(238, 29%, 16%);
+  --text-question-hover: hsl(14, 88%, 65%);
 
   /* #### Gradient */
 
@@ -35,8 +35,8 @@
 
   /* #### Text */
 
-  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
-  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --text-question: hsl(237, 12%, 33%);
+  --text-answer: hsl(240, 6%, 50%);
 
   /* #### Dividers */
 
@@ -55,7 +55,10 @@ body {
   background: var(--main-back);
 }
 
+/* Base */
+
 .card-container {
+  width: 33rem;
   margin: auto 2rem;
   padding: 1.5rem;
   padding-top: 0;
@@ -73,18 +76,76 @@ header {
 }
 
 .header__img {
-  width: 83%;
+  width: 19.5rem;
   position: relative;
-  top: -9.4rem;
+  top: -9rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.header__title {
+/* Main */
+
+.main__title {
   text-align: center;
-  font-size: 3rem;
-  margin-top: -5rem;
+  font-size: 2.7rem;
+  margin-top: -4rem;
   margin-bottom: 3rem;
+}
+
+.question__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.faq__item {
+  margin: 1.5rem;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+.question__box {
+  margin: 1rem auto;
+}
+
+.question {
+  color: var(--text-question);
+  cursor: pointer;
+}
+
+.question:hover {
+  color: var(--text-question-hover);
+}
+
+.button__icon {
+  transform: rotate(-180deg);
+}
+
+.answer__box {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.answer {
+  color: var(--text-answer);
+}
+
+/* Actions */
+
+.select {
+  color: var(--text-question-select);
+  font-weight: var(--bold);
+}
+
+.push {
+  transform: rotate(180deg);
+}
+
+.select:hover {
+  color: var(--text-question-select);
+}
+
+.pull {
+  display: none;
 }
 
 /* Footer */
@@ -104,4 +165,53 @@ footer {
 }
 .attribution a {
   color: white;
+}
+
+/* Medium devices screen */
+
+@media screen and (min-width: 750px) {
+  .card-container {
+    width: 60%;
+  }
+
+  .header__img {
+    width: 60%;
+  }
+
+  .answer__box {
+    max-width: 80%;
+  }
+
+  .question,
+  .answer {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header {
+    background-position: bottom left;
+  }
+
+  .header__img {
+    width: 100%;
+  }
+
+  .header__img-large {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translateX(-25%);
+  }
+}
+
+/* Large device screen */
+
+@media screen and (min-width: 1200px) {
 }
