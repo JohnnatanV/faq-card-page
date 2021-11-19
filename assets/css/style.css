@@ -1,25 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 12px;
-  font-family: "Kumbh Sans", sans-serif;
-}
-
 :root {
   /* ## Colors */
-
   /* ### Primary */
-
   /* #### Text */
 
   --text-question-select: hsl(238, 29%, 16%);
   --text-question-hover: hsl(14, 88%, 65%);
 
   /* #### Gradient */
-
   /* Background gradient: */
 
   --Soft-violet: hsl(273, 75%, 66%);
@@ -32,7 +21,6 @@
   );
 
   /* ### Neutral */
-
   /* #### Text */
 
   --text-question: hsl(237, 12%, 33%);
@@ -47,6 +35,14 @@
   --bold: 700;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -57,11 +53,11 @@ body {
 
 /* Base */
 
-.card-container {
+.card {
   width: 33rem;
   margin: auto 2rem;
   padding: 1.5rem;
-  padding-top: 0;
+  /* padding-top: 0; */
   background-color: white;
   border-radius: 2rem;
   position: relative;
@@ -69,23 +65,23 @@ body {
 
 /* Header */
 
-header {
+.card__img {
   background-image: url("../images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-.header__img {
-  width: 19.5rem;
-  position: relative;
-  top: -9rem;
-  left: 50%;
-  transform: translateX(-50%);
+.card__img-mobile {
+  width: 80%;
+}
+
+.card__img-desktop {
+  display: none;
 }
 
 /* Main */
 
-.main__title {
+.card__title {
   text-align: center;
   font-size: 2.7rem;
   margin-top: -4rem;
@@ -105,14 +101,15 @@ header {
 
 .question__box {
   margin: 1rem auto;
-}
-
-.question {
-  color: var(--text-question);
   cursor: pointer;
 }
 
-.question:hover {
+.question {
+  font-weight: 400;
+  color: var(--text-question);
+}
+
+.question__box:hover .question {
   color: var(--text-question-hover);
 }
 
@@ -170,11 +167,7 @@ footer {
 /* Medium devices screen */
 
 @media screen and (min-width: 750px) {
-  .card-container {
-    width: 60%;
-  }
-
-  .header__img {
+  .card {
     width: 60%;
   }
 
@@ -189,20 +182,33 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .header {
+  .card__img,
+  .card__text {
+    flex: 1;
+  }
+
+  .card__img {
     background-position: bottom left;
   }
 
-  .header__img {
-    width: 100%;
+  .card__title {
+    text-align: left;
+    margin: auto 1.25rem;
+    margin-top: auto;
   }
 
-  .header__img-large {
+  .card__img-mobile {
+    display: none;
+  }
+
+  .card__img-dektop {
+    display: block;
     width: 100%;
     position: relative;
     top: auto;

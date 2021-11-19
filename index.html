@@ -23,26 +23,24 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    <div class="card-container">
-      <header class="header">
-        <picture>
-          <source
-            class="header__img-large"
-            media="(min-width:1024px)"
-            srcset="./assets/images/illustration-woman-online-desktop.svg"
-          />
-          <img
-            class="header__img"
-            src="./assets/images/illustration-woman-online-mobile.svg"
-            alt=""
-          />
-        </picture>
-      </header>
-      <main class="main">
-        <h1 class="main__title">FAQ</h1>
+    <section class="card">
+      <div class="card__img">
+        <img
+          class="card__img-desktop"
+          src="./assets/images/illustration-woman-online-desktop.svg"
+          alt=""
+        />
+        <img
+          src="assets/images/illustration-woman-online-mobile.svg"
+          alt=""
+          class="card__img-mobile"
+        />
+      </div>
+      <div class="card__text">
+        <h1 class="card__title">FAQ</h1>
         <div class="faq__item">
           <div class="question__box">
-            <p class="question">How many team members can I invite?</p>
+            <h2 class="question">How many team members can I invite?</h2>
             <span>
               <img
                 class="btn__icon"
@@ -130,8 +128,8 @@
             </p>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
 
     <footer>
       <div class="attribution">
