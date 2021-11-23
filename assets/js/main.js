@@ -1,9 +1,10 @@
-const questions = document.querySelectorAll(".question__box");
+const items = document.querySelectorAll(".faq__item");
 
 const selection = () => {
-  questions.forEach((question) => {
-    question.addEventListener("click", (e) => {
-      console.log(e.target.childNodes);
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.childNodes[1].childNodes[1].classList.add("select");
+      item.childNodes[1].childNodes[3].childNodes[1].classList.add("push");
       // question.classList.add("select");
       // e.target.nextElementSibling.childNodes[1].classList.add("push");
       // e.target.parentNode.parentNode.childNodes[3].classList.remove("pull");
