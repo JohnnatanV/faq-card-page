@@ -11,134 +11,126 @@
       sizes="32x32"
       href="assets/images/favicon-32x32.png"
     />
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Fontawesome -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="assets/css/all.css" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
 
-    <!-- Scripts -->
-    <script defer src="assets/js/main.js"></script>
-    <!--  -->
-
     <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <section class="card">
-      <div class="card__img">
-        <img
-          class="card__img-desktop"
-          src="./assets/images/illustration-woman-online-desktop.svg"
-          alt=""
-        />
+    <main class="container">
+      <section class="header">
         <img
           src="assets/images/illustration-woman-online-mobile.svg"
           alt=""
-          class="card__img-mobile"
+          class="mobile_img"
         />
-      </div>
-      <div class="card__text">
-        <h1 class="card__title">FAQ</h1>
-        <div class="faq__item">
-          <div class="question__box">
-            <h2 class="question">How many team members can I invite?</h2>
-            <span>
+        <img
+          src="assets/images/illustration-woman-online-desktop.svg"
+          alt=""
+          class="desktop_img"
+        />
+      </section>
+      <section class="content">
+        <h1 class="title">FAQ</h1>
+
+        <div class="info_container">
+          <div class="info_box">
+            <div class="question" id="faq-1">
+              <p class="question_text">How many team members can I invite?</p>
               <img
-                class="btn__icon"
                 src="assets/images/icon-arrow-down.svg"
                 alt=""
+                class="question_arrow"
               />
-            </span>
-          </div>
-          <div class="answer__box pull">
-            <p class="answer">
+            </div>
+            <div class="answer">
               You can invite up to 2 additional users on the Free plan. There is
               no limit on team members for the Premium plan.
-            </p>
+            </div>
           </div>
-        </div>
-        <div class="faq__item">
-          <div class="question__box">
-            <p class="question">What is the maximum file upload size?</p>
-            <span>
+          <div class="info_box">
+            <div class="question" id="faq-2">
+              <p class="question_text">What is the maximum file upload size?</p>
               <img
-                class="btn__icon"
                 src="assets/images/icon-arrow-down.svg"
                 alt=""
+                class="question_arrow"
               />
-            </span>
-          </div>
-          <div class="answer__box pull">
-            <p class="answer">
+            </div>
+            <div class="answer">
               No more than 2GB. All files in your account must fit your allotted
               storage space.
-            </p>
+            </div>
           </div>
-        </div>
-        <div class="faq__item">
-          <div class="question__box">
-            <p class="question">How do I reset my password?</p>
-            <span>
+          <div class="info_box">
+            <div class="question" id="faq-3">
+              <p class="question_text">How do I reset my password?</p>
               <img
-                class="btn__icon"
                 src="assets/images/icon-arrow-down.svg"
                 alt=""
+                class="question_arrow"
               />
-            </span>
-          </div>
-          <div class="answer__box pull">
-            <p class="answer">
+            </div>
+            <div class="answer">
               Click “Forgot password” from the login page or “Change password”
               from your profile page. A reset link will be emailed to you.
-            </p>
+            </div>
           </div>
-        </div>
-        <div class="faq__item">
-          <div class="question__box">
-            <p class="question">Can I cancel my subscription?</p>
-            <span>
+          <div class="info_box">
+            <div class="question" id="faq-4">
+              <p class="question_text">Can I cancel my subscription?</p>
               <img
-                class="btn__icon"
                 src="assets/images/icon-arrow-down.svg"
                 alt=""
+                class="question_arrow"
               />
-            </span>
-          </div>
-          <div class="answer__box pull">
-            <p class="answer">
+            </div>
+            <div class="answer">
               Yes! Send us a message and we’ll process your request no questions
               asked.
-            </p>
+            </div>
           </div>
-        </div>
-        <div class="faq__item">
-          <div class="question__box">
-            <p class="question">Do you provide additional support?</p>
-            <span>
+          <div class="info_box">
+            <div class="question" id="faq-5">
+              <p class="question_text">Do you provide additional support?</p>
               <img
-                class="btn__icon"
                 src="assets/images/icon-arrow-down.svg"
                 alt=""
+                class="question_arrow"
               />
-            </span>
-          </div>
-          <div class="answer__box pull">
-            <p class="answer">
+            </div>
+            <div class="answer">
               Chat and email support is available 24/7. Phone lines are open
               during normal business hours.
-            </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div class="attribution">
         Challenge by
-        <a
-          href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub/faq-accordion-card-E98s5SO9P"
-          target="_blank"
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/JohnnatanV">Johnnatan</a>.
+        >. Coded by
+        <a href="https://github.com/JohnnatanV/faq-card-page" target="_blank"
+          >Johnatan Villaneda</a
+        >.
       </div>
     </footer>
   </body>

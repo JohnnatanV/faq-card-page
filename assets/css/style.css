@@ -1,151 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-
-:root {
-  /* ## Colors */
-  /* ### Primary */
-  /* #### Text */
-
-  --text-question-select: hsl(238, 29%, 16%);
-  --text-question-hover: hsl(14, 88%, 65%);
-
-  /* #### Gradient */
-  /* Background gradient: */
-
-  --Soft-violet: hsl(273, 75%, 66%);
-  --Soft-blue: hsl(240, 73%, 65%);
-
-  --main-back: linear-gradient(
-    180deg,
-    var(--Soft-violet) 0%,
-    var(--Soft-blue) 100%
-  );
-
-  /* ### Neutral */
-  /* #### Text */
-
-  --text-question: hsl(237, 12%, 33%);
-  --text-answer: hsl(240, 6%, 50%);
-
-  /* #### Dividers */
-
-  --Light-grayish-blue: hsl(240, 5%, 91%);
-
-  /* Font Weight */
-
-  --bold: 700;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
 }
 
+/* BASE */
+:root {
+  /* Color */
+  /* Main Text */
+  --main-text: hsl(238, 29%, 16%);
+  --hover-text: hsl(14, 88%, 65%);
+
+  /* Sub text */
+  --question-text: hsl(237, 12%, 33%);
+  --answer-text: hsl(240, 6%, 50%);
+
+  /* Background */
+  --background-linear: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+  /* --background-linear: linear-gradient(
+    180deg,
+    #af67e9 0%,
+    #6565e7 100%
+  ); */
+}
+
+/* ! Bold: 700 */
+
 body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--main-back);
-}
-
-/* Base */
-
-.card {
-  width: 33rem;
-  margin: auto 2rem;
-  padding: 1.5rem;
-  /* padding-top: 0; */
-  background-color: white;
-  border-radius: 2rem;
-  position: relative;
-}
-
-/* Header */
-
-.card__img {
-  background-image: url("../images/bg-pattern-mobile.svg");
+  background: var(--background-linear);
   background-repeat: no-repeat;
-  background-position: top center;
+  font-size: 12px;
+  height: 100vh;
 }
 
-.card__img-mobile {
-  width: 80%;
+.divider {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
-.card__img-desktop {
+.container {
+  position: relative;
+  width: 320px;
+  padding: 1.5rem;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  margin: auto;
+  margin-top: -50%;
+}
+
+.desktop_img {
   display: none;
 }
 
-/* Main */
+.mobile_img {
+  width: 90%;
+}
 
-.card__title {
+/* CONTENT */
+
+.title {
+  font-size: 2rem;
   text-align: center;
-  font-size: 2.7rem;
-  margin-top: -4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-.question__box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.faq__item {
-  margin: 1.5rem;
-  border-bottom: 1px solid var(--Light-grayish-blue);
-}
-
-.question__box {
-  margin: 1rem auto;
-  cursor: pointer;
-}
-
-.question {
-  font-weight: 400;
-  color: var(--text-question);
-}
-
-.question__box:hover .question {
-  color: var(--text-question-hover);
-}
-
-.button__icon {
-  transform: rotate(-180deg);
-}
-
-.answer__box {
-  width: 80%;
-  margin-bottom: 1rem;
-}
-
-.answer {
-  color: var(--text-answer);
-}
-
-/* Actions */
-
-.select {
-  color: var(--text-question-select);
-  font-weight: var(--bold);
-}
-
-.push {
-  transform: rotate(180deg);
-}
-
-.select:hover {
-  color: var(--text-question-select);
-}
-
-.pull {
-  display: none;
-}
-
-/* Footer */
+/* FOOTER */
 
 footer {
   position: fixed;
@@ -156,68 +83,8 @@ footer {
 
 .attribution {
   font-size: 11px;
-  font-weight: var(--bold);
   text-align: center;
-  color: white;
 }
 .attribution a {
-  color: white;
-}
-
-/* Medium devices screen */
-
-@media screen and (min-width: 750px) {
-  .card {
-    width: 60%;
-  }
-
-  .answer__box {
-    max-width: 80%;
-  }
-
-  .question,
-  .answer {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card__img,
-  .card__text {
-    flex: 1;
-  }
-
-  .card__img {
-    background-position: bottom left;
-  }
-
-  .card__title {
-    text-align: left;
-    margin: auto 1.25rem;
-    margin-top: auto;
-  }
-
-  .card__img-mobile {
-    display: none;
-  }
-
-  .card__img-dektop {
-    display: block;
-    width: 100%;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: translateX(-25%);
-  }
-}
-
-/* Large device screen */
-
-@media screen and (min-width: 1200px) {
+  color: #fff;
 }
