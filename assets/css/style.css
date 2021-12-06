@@ -34,18 +34,18 @@ body {
   height: 100vh;
 }
 
-.divider {
-  border-bottom: 1px solid hsl(240, 5%, 91%);
-}
-
 .container {
   position: relative;
-  width: 320px;
+  border-radius: 1.5rem;
+  width: 315px;
   padding: 1.5rem;
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
   background-color: #fff;
+  box-shadow: 1px 14px 42px 1px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 1px 14px 42px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 1px 14px 42px 1px rgba(0, 0, 0, 0.45);
 }
 
 /* HEADER */
@@ -54,14 +54,21 @@ body {
   position: relative;
   margin: auto;
   margin-top: -50%;
+  display: flex;
+  justify-content: center;
 }
 
 .desktop_img {
   display: none;
+  background-image: url("../images/bg-pattern-desktop.svg");
 }
 
 .mobile_img {
   width: 90%;
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 1.6rem;
 }
 
 /* CONTENT */
@@ -70,6 +77,53 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.info_box {
+  margin: 1.3rem auto;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  padding-bottom: 1rem;
+}
+
+.question_text {
+  color: var(--question-text);
+}
+
+.answer_text {
+  color: var(--answer-text);
+}
+
+.question:hover .question_text {
+  color: var(--hover-text);
+}
+
+/* Active acordion */
+
+.active-text {
+  font-weight: 700;
+}
+
+.active-arrow {
+  transform: rotate(180deg);
+}
+
+.acordion {
+  display: block;
 }
 
 /* FOOTER */
@@ -87,4 +141,35 @@ footer {
 }
 .attribution a {
   color: #fff;
+}
+
+/* Desktop Screen */
+
+@media screen and (min-width: 1024px) {
+  .header {
+    margin: auto;
+    height: 100%;
+  }
+
+  .container {
+    width: 760px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 4rem;
+  }
+
+  .desktop_img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-left: -35%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    /* background-position: center 50%; */
+  }
+
+  .mobile_img {
+    display: none;
+  }
 }
